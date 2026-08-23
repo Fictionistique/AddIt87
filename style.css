@@ -30,7 +30,7 @@ body{
 }
 #region{position:absolute;left:0;top:0;width:100%;height:100%;white-space:pre;overflow:hidden}
 
-#logo{position:absolute;left:21ch;top:6.5em;color:var(--green);white-space:pre;text-shadow:0 0 8px rgba(19,161,14,.55);transform:scale(0.5);transform-origin:left top}
+#logo{position:absolute;left:14.75ch;top:6.5em;color:var(--green);white-space:pre;text-shadow:0 0 8px rgba(19,161,14,.55);transform:scale(0.5);transform-origin:left top}
 #menubar{position:absolute;left:21ch;top:12em;white-space:pre;color:var(--white)}
 #menubar span{cursor:pointer}
 #menubar span:hover{filter:brightness(1.25)}
