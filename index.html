@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Addit'87</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="stage">
+  <div id="screen">
+    <div id="region">
+      <pre id="logo"></pre>
+      <div id="menubar"></div>
+      <div id="submenu"></div>
+      <pre id="page"></pre>
+      <div id="footer"></div>
+      <div id="caret"></div>
+    </div>
+
+    <div id="boot">
+      <pre id="bootpre"></pre>
+      <div id="bootprompt">
+        <div class="big">ADDIT'87</div>
+        <div class="blinkslow">&#9646; PRESS ANY KEY TO BOOT &#9646;</div>
+        <div class="dim">sound recommended &middot; arrows navigate &middot; esc exits</div>
+      </div>
+    </div>
+
+    <div id="quit">
+      <div class="msg">Thanks for using AddIt'87.</div>
+      <div class="msg" style="color:var(--gray)">Which is probably true.</div>
+      <div class="reboot blinkslow">[ PRESS ANY KEY TO REBOOT ]</div>
+    </div>
+
+    <div class="overlay" id="editOverlay">
+      <div class="panel">
+        <div class="titlebar" id="editTitle">EDIT ENTRY</div>
+        <div class="body">
+          <label id="labelField">LABEL <span class="hint">(max 9 chars, shown as caps)</span></label>
+          <input type="text" id="labelInput" maxlength="9">
+          <label>TEXT <span class="hint">(max 10 lines &times; 80 chars)</span></label>
+          <textarea id="textInput" spellcheck="false"></textarea>
+          <div class="hint" id="editMeta"></div>
+          <div class="buttons">
+            <button class="primary" id="btnSave">F2 SAVE</button>
+            <button id="btnCancel">ESC CANCEL</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="overlay" id="confirmOverlay">
+      <div class="panel" style="min-width:52ch">
+        <div class="titlebar" id="confirmTitle">CONFIRM</div>
+        <div class="body">
+          <p class="kv" id="confirmMsg"></p>
+          <div class="buttons">
+            <button class="primary" id="btnYes">Y YES</button>
+            <button id="btnNo">N NO</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="overlay" id="helpOverlay">
+      <div class="panel">
+        <div class="titlebar">ADDIT'87 &mdash; HELP</div>
+        <div class="body kv help">
+          <p><b>&larr; / &rarr;</b>previous / next menu</p>
+          <p><b>&uarr; / &darr;</b>previous / next entry (wraps)</p>
+          <p><b>ENTER</b>edit selected entry</p>
+          <p><b>N</b>new entry in current menu</p>
+          <p><b>D</b>delete selected entry</p>
+          <p><b>F2</b>rename current menu</p>
+          <p><b>M</b>add new menu tab</p>
+          <p><b>SHIFT+D</b>delete current menu</p>
+          <p><b>S</b>export data.json</p>
+          <p><b>O</b>import data.json</p>
+          <p><b>SHIFT+R</b>factory reset (keeps backup in export)</p>
+          <p><b>H / F1</b>this help</p>
+          <p><b>ESC</b>close dialog &middot; twice to quit</p>
+          <p class="hint" style="margin-top:.8em">Changes are saved automatically to this browser.</p>
+        </div>
+        <div class="body"><div class="buttons"><button class="primary" id="btnHelpClose">ESC CLOSE</button></div></div>
+      </div>
+    </div>
+
+    <input type="file" id="fileInput" accept=".json,application/json" style="display:none">
+  </div>
+</div>
+
+<div id="crt"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
