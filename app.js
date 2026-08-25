@@ -20,6 +20,8 @@ const BOOT_CHIME_B64 = "UklGRu40AABXQVZFZm10IBAAAAABAAEAQB8AAIA+AAACABAAZGF0Yco0
 
 const DEFAULT_DATA = [{"Menu": " WEEKLY DIARY ", "Items": [{"Text": ["Monday, August 04, 1986.", "", "The start of a crucial month. Steve has put us all on high alert", "with the deadline for Addit'87. The tension in the office is awful,", "but I'm trying to stay focused.", "Today, I worked on interface improvements.", "There is still so much to do, but I know we can make it."], "Label": " WEEK 32 "}, {"Text": ["Friday, August 15, 1986.", "", "Today was a challenging day. We encountered an unexpected bug that", "threatened to undo much of our progress.", "I plan to work through the weekend to make sure we stay on schedule."], "Label": " WEEK 33 "}, {"Text": ["Monday, August 18, 1986.", "", "After working through the long weekend, we found the bug.", "Today was a long day full of repeated tests. Steve seems a bit more relaxed", "now that we are getting closer to completion. ", "We still have a few crucial weeks to go."], "Label": " WEEK 34 "}, {"Text": ["Sunday, August 31, 1986.", "", "It's funny how a program designed to help organize your life", "is the reason why I can't be at the Labor Day party. But I'm", "glad we made the deadline.", "", "And I'm glad I can now spend two stress-free weeks in good", "old Providence Oaks."], "Label": " WEEK 35 "}, {"Text": ["Tuesday, September 2, 1986.", "", "I spent the morning delivering packages to the residents.", "Along the way, I had a conversation with Mildred Jenkins", "about her beloved cat Mortimer.", "", "It was nice to see how some things never change.", "The peace and simplicity of the village are a welcome change."], "Label": " WEEK 36 "}]}, {"Menu": " EXPENSES ", "Items": [{"Text": ["Rent", "Date: September 1, 1986", "Description: Monthly apartment rent", "Amount: $400", "", "Groceries", "Date: September 3, 1986", "Description: Weekly grocery shopping", "Amount: $30"], "Label": " SEPT.   "}, {"Text": ["Rent", "Date: August 1, 1986", "Description: Monthly apartment rent", "Amount: $400", "", "Travel", "Date: August 5, 1986", "Description: Ticket to Portland International Airport (PDX)", "Amount: $160"], "Label": " AUG.    "}]}, {"Menu": " ADDRESSES ", "Items": [{"Text": ["Mom and Dad", "102 Oak St, Providence Oaks, OR 97026"], "Label": " FAMILY  "}, {"Text": ["Kay Evans", "402 Pine St, Providence Oaks, OR 97026", "", "Angie Eastman", "351 Main St, Providence Oaks, OR 97026"], "Label": " FRIENDS "}, {"Text": ["Steve", "123 Beacon St, Boston, MA 02116"], "Label": " WORK    "}]}, {"Menu": " SHOPPING ", "Items": [{"Text": ["- Find a new outfit for the talent show.", "- Buy a new toothbrush at the store from Nancy. "], "Label": "  TODAY  "}]}, {"Menu": " TO DO ", "Items": [{"Text": ["- Return book to the library", "- Get nails done", "- Get Blueberry Pie!!!!"], "Label": "  TODAY  "}]}];
 
+const KEYCLICK_B64 = "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FgJTAiYCOAL2AfUB5gHiAdIBtAGtAYwBnwFjAVgBRQEtAUsBSQEWAQgBJQEnAf4AAQH/ABgBHgEeAQ0BBAFCASMBRgFhAUoBZAFkAQkBFQEmAekAGwEZAQQBAgHRAJ4AjgBNAA8AMwAOAPP/7v/M/9j/6/+//+v/1/9w/4n/mf+g/7n/t/+m/8v////s/8D/w//S/9L/2//d/9b/1f8SACgAGwAoADYAZQA1ABsAFQDw/8b/rv+E/2T/dP+F/2j/hP+R/2f/qP98/3//mP+N/6b/tf+8/63/sv+T/5H/j/+l/87/3//2/wsA/v8iAFAALgAdADcAHADe//3/DwAbADUAQQBTAGAAUgA3ADYALgALAPX/CgD3//T/EgAhADgAXgBUAFMAiwBhAF4AcQB0AHsAigClAJUAlwCuALMAtADRAOcADgEGAfMAMgE9ATUBWQFtAYgBmwGkAb4BywHIAdIB0AHZAeEB7AEHAhUCEQIUAgMC5AHgAc0BsAGVAY4BiAGXAZgBnQHUAcgB3QHzAfkBNQJMAlICdgKVApECvwKyAqECuAKWAqQCpwKtAsICwwLWAtUCywLpAvIC6QLmAtYC5gLfAuAC7ALtAv4CFQP9Ai8DXANYA4kDkgOZA5EDgQN+A48DlQOFA30DbgN0A3QDXANrA2IDQANrA18DVwNzA2kDmwPVA9MD2QPrA+QD2wPLA7gDxgPMA6gDpAO1A98D0APUA/ED7APmA/wD7gPmAxQEEATrA/AD8wMGBJoDAwTwAzUDrgPxA1gDdgPEA5wDzwPvAwME1AP3AykEEAQhBPcDogOnA8cD1QOsA7YD9wPvA7gD4gMGBLADsAMYBOMD+gP9A9QD/AO/A3gDwQPqA7gDoANuA3gDlAM9AxYDPgOcA5gDWQNHA58DyQOFA4MDwQOJA0sDPAMuAxIDzgL4AtsCBwM+A5ICnQIhAwMDLwMqA5YCqwOZAuIBAQPVAb4BewIpAmwBLQImAu8B2AHOATgC6QEsAsMBpAEWAnsCjAEYArMC5AHJAc4B1AEJAZ4BDAK1AUMBzwGnAScBzgAEAXoBQwEPASgBPwFmAMMASgEcAQ4BwQDSAMwAuAC0AKMAcAAxAKcA0gBkAEcAQgAHABMAm//A/87/tP+0/8L/3//T/0AASwBbAA0AOABlAAgA1f+M/5r/pv9+/3P/cP9w/2z/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";
+
 /* ------------------------------------------------------------------ */
 /* State                                                               */
 /* ------------------------------------------------------------------ */
@@ -33,7 +35,7 @@ let data = loadData();
 let curMenu = 0;
 let curItem = 0;
 
-let mode = "boot-prompt";       /* boot-prompt | booting | run | quit */
+let mode = "dos-boot";          /* dos-boot | boot-prompt | booting | run | quit */
 let escArmed = false;
 let editCtx = null;             /* {kind:'entry'|'newEntry'|'menu'|'newMenu'} */
 let pendingConfirm = null;
@@ -172,12 +174,65 @@ async function playChime(){
 }
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
+/* Mechanical key click: plays the embedded cropped keyboard sample */
+let keyClickBuffer = null;
+async function ensureKeyClick(){
+  if(keyClickBuffer || !audioCtx) return;
+  try{
+    const bin = atob(KEYCLICK_B64);
+    const arr = new Uint8Array(bin.length);
+    for(let i = 0; i < bin.length; i++) arr[i] = bin.charCodeAt(i);
+    keyClickBuffer = await audioCtx.decodeAudioData(arr.buffer);
+  }catch(e){ keyClickBuffer = null; }
+}
+function playKeyClick(){
+  if(!audioCtx || !keyClickBuffer) return;
+  try{
+    const src = audioCtx.createBufferSource();
+    src.buffer = keyClickBuffer;
+    const g = audioCtx.createGain();
+    g.gain.value = 1.0;
+    src.connect(g).connect(audioCtx.destination);
+    src.start();
+  }catch(e){}
+}
+
+/* DOS-style boot: C:> is already on screen, only "addit" types out */
+async function runDosBoot(){
+  const token = ++bootToken;
+  mode = "dos-boot";
+  $("bootprompt").style.display = "none";
+  $("bootpre").textContent = "";
+  $("dosprompt").textContent = "C:>";   /* prompt preexists, like real DOS */
+  await ensureAudio();
+  await ensureKeyClick();
+
+  const cmd = "addit";
+  await sleep(280);
+  if(token !== bootToken) return;
+
+  // Type the command character by character
+  for(let i = 0; i < cmd.length; i++){
+    if(token !== bootToken) return;
+    $("dosprompt").textContent = "C:>" + cmd.slice(0, i + 1);
+    playKeyClick();
+    await sleep(190 + Math.random() * 90);
+  }
+  await sleep(1000);                     /* 1s beat before the waterfall */
+  if(token !== bootToken) return;
+  $("dosprompt").textContent = "";      /* clear line before waterfall */
+
+  // Proceed to waterfall animation (own element, green logo styling)
+  runBoot();
+}
+
 let bootToken = 0;
 async function runBoot(){
   const token = ++bootToken;
   mode = "booting";
   $("bootprompt").style.display = "none";
   $("bootpre").textContent = "";
+  $("dosprompt").textContent = "";
   playChime();
 
   const H = LOGO.length;
@@ -218,11 +273,12 @@ function quitApp(){
 
 function showBootPrompt(){
   bootToken++;
-  mode = "boot-prompt";
+  mode = "dos-boot";
   $("quit").style.display = "none";
   $("bootpre").textContent = "";
   $("boot").style.display = "block";
-  $("bootprompt").style.display = "flex";
+  $("bootprompt").style.display = "none";
+  runDosBoot();
 }
 
 /* ------------------------------------------------------------------ */
@@ -388,6 +444,14 @@ function flashFooter(msg, warn){
 /* ------------------------------------------------------------------ */
 
 document.addEventListener("keydown", async e => {
+  if(mode === "dos-boot"){
+    // First keypress starts the DOS boot sequence (if not already running)
+    if(bootToken === 0){
+      await ensureAudio();
+      runDosBoot();
+    }
+    return;
+  }
   if(mode === "boot-prompt"){
     e.preventDefault();
     await ensureAudio();
@@ -449,8 +513,8 @@ document.addEventListener("keydown", async e => {
   }
 });
 
-$("bootprompt").addEventListener("click", async () => {
-  if(mode === "boot-prompt"){ await ensureAudio(); runBoot(); }
+$("boot").addEventListener("click", async () => {
+  if(mode === "dos-boot"){ await ensureAudio(); runDosBoot(); }
 });
 $("quit").addEventListener("click", () => { if(mode === "quit") showBootPrompt(); });
 
